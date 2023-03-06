@@ -3,29 +3,26 @@ import { Link, useRouter } from "expo-router";
 import { StatusBar } from 'expo-status-bar';
 import ButtonIcon from "../src/Components/ButtonIcon";
 import { Provider as PaperProvider } from 'react-native-paper';
-import { Button } from 'react-native-paper';
-import { Appbar } from 'react-native-paper';
+import { Button, Divider, Appbar } from 'react-native-paper';
 import * as React from 'react';
 
 
 export default function index() {
     const router = useRouter();
     const PlaceholderImage = require('../assets/images/mobil-bg1.png');
-    const _goBack = () => console.log('Went back');
+    const logo = require('../assets/images/logo1.png');
 
-    const _handleSearch = () => console.log('Searching');
-
-    const _handleMore = () => console.log('Shown more');
     return (
         <PaperProvider>
 
             <View style={styles.container}>
                 {/* header */}
                 <Appbar.Header statusBarHeight={10} mode={"small"} >
-                    <Appbar.Content title="Doktora Danış" style={{ alignItems: "center" }} />
+                    <Image source={logo} style={{ height: '100%' }} />
                 </Appbar.Header>
                 {/* background image */}
                 <Image style={styles.image} source={PlaceholderImage} />
+                <Divider />
                 {/* panel */}
                 <View style={styles.panel}>
                     <View style={styles.buttonContainer} >
@@ -46,7 +43,7 @@ export default function index() {
                         </Button>
                     </View>
                 </View>
-                <StatusBar style="dark" />
+
             </View >
         </PaperProvider>
     );
