@@ -1,7 +1,7 @@
 {
   "name": "findadoctor",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@expo/webpack-config": "^18.0.1",
+    "@react-native-async-storage/async-storage": "1.17.11",
+    "@react-navigation/native": "^6.1.6",
+    "@reduxjs/toolkit": "^1.9.3",
     "expo": "~48.0.5",
     "expo-constants": "~14.2.1",
     "expo-linking": "~4.0.1",
@@ -27,9 +30,5 @@
   "devDependencies": {
     "@babel/core": "^7.20.0"
   },
-  "private": true,
-  "overrides": {
-    "metro": "0.73.7",
-    "metro-resolver": "0.73.7"
-  }
+  "private": true
 }
