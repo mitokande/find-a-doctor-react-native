@@ -42,7 +42,7 @@ export default function DoctorLogin({ navigation }) {
     return (
         <SafeAreaView>
             {/* header */}
-            <Appbar.Header statusBarHeight={30} mode={"small"} >
+            <Appbar.Header statusBarHeight={40} mode={"small"} >
                 <Image source={logo} resizeMode='contain' style={{ height: '100%', width: '100%' }} />
             </Appbar.Header>
             <View>

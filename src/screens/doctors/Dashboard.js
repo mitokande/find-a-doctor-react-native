@@ -11,17 +11,26 @@ export default function DoctorDashboard() {
 
     const dispatch = useDispatch();
     const user = useSelector((state) => state.userSlice.user);
-
+    // console.log(user)
     return (
         <SafeAreaView>
             {/* header */}
-            <Appbar.Header statusBarHeight={30} mode={"small"} >
+            <Appbar.Header statusBarHeight={40} mode={"small"} >
                 <Image source={logo} resizeMode='contain' style={{ height: '100%', width: '100%' }} />
             </Appbar.Header>
             <View>
                 <Headline style={{ alignSelf: "center", marginTop: 10 }}>
-                    Doktor {user}
+                    Doktor {user.first_name} {user.last_name} Hoşgeldiniz
                 </Headline>
+                <View style={{ width: '80%', alignSelf: 'center', marginTop: 10 }}>
+                    <Image source={{ uri: 'https://doktoradanis.net/images/doctors/profile/' + user.profile_picture }} style={{ width: '100%', height: '50%', marginBottom: 10 }} />
+                    <Text style={{ marginBottom: 10 }}>
+                        Hakkımda: {user.about}
+                    </Text>
+                    <Text>
+                        Eğitim: {user.education}
+                    </Text>
+                </View>
             </View>
             {/* <Button
                 style={{ backgroundColor: '#aaaa' }}
